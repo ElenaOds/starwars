@@ -7,6 +7,8 @@ export default function Home() {
       <Link href="/heroes" className="text-blue-500">
         Heroes
       </Link>
+
+  
     </main>
   );
 }

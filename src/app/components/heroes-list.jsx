@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react';
 import { getHeroes } from '../../lib/api';
 import HeroesListItem from './heroes-list-item';
 
-export default function HeroesList({count}) {
+export default function HeroesList({ count }) {
  const [items, setItems ] = useState([]);
  const [page, setPage] = useState(1);
+
      useEffect(() => {
         const fetchData = async () => {
             try {
@@ -28,6 +29,7 @@ const handlePreviousPage = () => {
 const handleNextPage = () => {
     setPage(page + 1);
 };
+
 
     return (
       <div>

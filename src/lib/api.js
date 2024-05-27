@@ -7,10 +7,7 @@ const api = axios.create({
 
   export const getHeroes = async ({ page }) => {
     try {
-        let url = 'people/';
-        if (page > 1) {
-            url += `?page=${page}`;
-        }
+      const url = page === 1 ? 'people/' : `people/?page=${page}`;
         const { data } = await api.get(url, {
             params: {
                 per_page: 10, 
@@ -28,7 +25,38 @@ const api = axios.create({
       const {data} = await api.get(`people/${id}`);
       return data;
     } catch (error) {
-      console.error("Error fetching heroes:", error);
+      console.error("Error fetching hero datails:", error);
       throw error;
     }
   };
+
+
+  export const getFilms = async () => {
+    try {
+      const {data} = await api.get(`films`);
+      return data;
+    } catch (error) {
+      console.error("Error fetching hero datails:", error);
+      throw error;
+    }
+  };
+
+
+
+export const getShips = async () => {
+  try {
+    const results = [];
+  
+    for (let page = 1; page <=4; page++) {    
+      const res = await axios.get(`https://sw-api.starnavi.io/starships/?page=${page}`);
+      results.push(...res.data.results);
+    }
+
+    return results;
+  } catch (error) {
+    console.error("Error fetching ships:", error);
+    throw error;
+  }
+};
+
+
