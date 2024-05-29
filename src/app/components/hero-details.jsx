@@ -1,12 +1,14 @@
 'use client'
+import React from 'react';
 
 import { useState, useEffect } from 'react';
 import { getHeroesById, getFilms, getShips } from '../../lib/api';
+import Flow from './flow';
 
-export default function HeroesDetailsData({id }) {
+export default function HeroesDetailsData({id}) {
     const [hero, setHero] = useState(null);
     const [films, setFilms] = useState([]);
-    const [ships, setShips] = useState([]);
+    const [starships, setStarships] = useState([]);
 
     
     useEffect(() => {
@@ -28,11 +30,10 @@ export default function HeroesDetailsData({id }) {
           }
         };
 
-        
-        const fetchShips = async () => {
+          const fetchStarships = async () => {
           try {
               const shipData = await getShips();
-              setShips(shipData);
+              setStarships(shipData);
    
           } catch (error) {
             console.error('Error fetching ships:', error);
@@ -41,45 +42,31 @@ export default function HeroesDetailsData({id }) {
   
           fetchHero();
           fetchFilms();
-          fetchShips();
+          fetchStarships();
       }, [id]);
-    
+ 
+     
       if (!hero) {
         return <p>No hero is available</p>; 
       }
 
+      
+      const selectedFilms = hero.films.map((filmId) => {
+        const film = films.find((f) => f.id === filmId);
+        return film ? film : 'Unknown film';
+      })
+
+      
+      const selectedShips = hero.starships.map((shipId) => {
+        const starship = starships.find((s) => s.id === shipId);
+        return starship ? starship : 'Unknown ship';
+      })
+     
+
 
     return (
         <div>
-          Hero details data
-          <h2>{hero.name}</h2>
-          <p>Color of eyes: {hero.eye_color}</p>
-          <p>Gender: {hero.gender}</p>
-          <p>Height: {hero.height}</p>
-        <div><h3>Films</h3>
-        {hero.films.map((filmId) => {
-        const film = films.find((f) => f.id === filmId);
-        return film ? (
-          <li key={film.id}>
-            <p>{film.title}</p>
-          </li>
-        ) : null; 
-      })}
-       
-       
-        </div>  
- 
-         <div><h3>Starships</h3>
-           {hero.starships.map((shipId) => {
-              const ship = ships.find((s) => s.id === shipId);
-              return ship ? (
-                <li key={ship.id}>
-                  <p>{ship.name}</p>
-                </li>
-              ) : null; 
-            })
-           }
-        </div>  
+        <Flow hero={hero} films={selectedFilms} starships={selectedShips}/>  
         </div>
     )
 }
