@@ -9,10 +9,10 @@ export default function Heores() {
  
     return (
       <main>
-        <h1>Heroes page</h1>
-        <Link href='/' className="text-blue-500">Home</Link>
+         <section className="pt-10 md:pb-10 lg:pb-44 px-10">
+        <h2 className="text-xl text-white mb-8">Travel through the galaxy with below heroes</h2>
         <HeroesList/>
-        {/* <Link href={`/heroes${params.heroId}`} className="text-blue-500">Hero Id</Link> */}
+        </section>
       </main>
     );
   }

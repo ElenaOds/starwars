@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import HeroesDetailsData from '../../components/hero-details';
+import ButtonBack from '../../components/button-back';
 
 export default function HeroDetails({params}) {
 
@@ -7,8 +7,10 @@ export default function HeroDetails({params}) {
 
     return (
       <main>
-        <Link href='/heroes' className="text-blue-500">Back to heroes</Link>
-        <HeroesDetailsData id={id}/>
+        <section className="py-10 px-10">
+          <ButtonBack/>
+          <HeroesDetailsData id={id}/>
+        </section>
       </main>
     );
   }

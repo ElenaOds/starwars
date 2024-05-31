@@ -50,13 +50,15 @@ export default function HeroesDetailsData({id}) {
         return <p>No hero is available</p>; 
       }
 
-      
+      //Getting films which correspond to specific hero
+      //each film from the hero object is compared with films array objects
+      //returning films which ids match to films ids in the hero object
       const selectedFilms = hero.films.map((filmId) => {
         const film = films.find((f) => f.id === filmId);
         return film ? film : 'Unknown film';
       })
 
-      
+      //same login with starships
       const selectedShips = hero.starships.map((shipId) => {
         const starship = starships.find((s) => s.id === shipId);
         return starship ? starship : 'Unknown ship';
@@ -65,7 +67,7 @@ export default function HeroesDetailsData({id}) {
 
 
     return (
-        <div>
+        <div className="w-full flex justify-center">
         <Flow hero={hero} films={selectedFilms} starships={selectedShips}/>  
         </div>
     )

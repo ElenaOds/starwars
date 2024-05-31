@@ -1,46 +1,50 @@
 'use client'
 import { useEffect, useState } from 'react';
+
 import { getHeroes } from '../../lib/api';
 import HeroesListItem from './heroes-list-item';
+import Pagination from './pagination';
 
-export default function HeroesList({ count }) {
+export default function HeroesList() {
  const [items, setItems ] = useState([]);
  const [page, setPage] = useState(1);
+ const [count, setCount] = useState();
 
      useEffect(() => {
         const fetchData = async () => {
             try {
-              const {results} = await getHeroes({ page });
-              setItems([...results]);
-        
+              const response = await getHeroes({page});
+              setCount(response.count)
+              setItems([...response.results]);
             } catch (error) {
               console.error(error);
             }
           };
-        fetchData({page});
+        fetchData();
       }, [page]);
+
 
 const handlePreviousPage = () => {
     if (page > 1) {
-        setPage(page - 1);
+        setPage((prevPage) => prevPage - 1);
     }
 };
 
 const handleNextPage = () => {
-    setPage(page + 1);
-};
+    setPage((prevPage) => prevPage + 1);
+}
 
 
     return (
-      <div>
-        <p>HeroesList</p>
+      <div className="flex flex-col w-full">
+      <ul className="grid gap-4 mb-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
        {items.map((item) => {
         return (
-            <HeroesListItem key={item.id} item={item}/>
+            <HeroesListItem key={item.id} item={item} />
          )
        })}  
-            <button type='button' onClick={handlePreviousPage} disabled={page === 1}>Previous</button>
-            <button type='button' onClick={handleNextPage} disabled={count < page * 10}>Next</button>
+      </ul>
+      <Pagination page={page} handlePreviousPage={handlePreviousPage} handleNextPage={handleNextPage} count={count}/>  
       </div>
     );
   } 
