@@ -13,6 +13,10 @@ export default function Header({}) {
     return pathname === href;
   };
 
+  const isActiveHero = (href) => {
+    return pathname.includes(href);
+  };
+
     return (
       <header className="flex items-center justify-between py-3 px-10 border-b-2 border-amber-400">
     <Link 
@@ -37,7 +41,7 @@ export default function Header({}) {
       <Link
       href="/heroes"
       className={clsx("hover:underline underline-offset-1",
-      isActive("/heroes") ? "text-amber-400" : "text-blue-500")}
+      isActiveHero("/heroes") ? "text-amber-400" : "text-blue-500")}
        >
         Heroes
       </Link>

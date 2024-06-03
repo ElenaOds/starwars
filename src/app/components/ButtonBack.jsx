@@ -12,6 +12,7 @@ export default function ButtonBack() {
         width={12}
         height={12}
         className="fill-white mr-0.5"
+        fetchPriority='high'
       /> Back</Link>
         </>
       );

@@ -2,8 +2,8 @@
 import { useEffect, useState } from 'react';
 
 import { getHeroes } from '../../lib/api';
-import HeroesListItem from './heroes-list-item';
-import Pagination from './pagination';
+import HeroesListItem from './HeroesListItem';
+import Pagination from './Pagination';
 
 export default function HeroesList() {
  const [items, setItems ] = useState([]);

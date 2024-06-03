@@ -1,5 +1,5 @@
-import HeroesDetailsData from '../../components/hero-details';
-import ButtonBack from '../../components/button-back';
+import HeroesDetailsData from '../../components/HeroDetails';
+import ButtonBack from '../../components/ButtonBack';
 
 export default function HeroDetails({params}) {
 

@@ -86,12 +86,13 @@ export default function Flow({ hero, films, starships }) {
 
 
     return (
-      <div style={{ width: '100vw', height: '100vh'}}>
+      <div style={{ width: "100%", height: "80vh"}}>
      <ReactFlow
         nodes={nodes}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
+        fitView
       >
         </ReactFlow>
     </div>

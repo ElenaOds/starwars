@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import HeroesList from '../components/heroes-list';
+import HeroesList from '../components/HeroesList';
 
 export const metadata = {
     title: "Star Wars heroes"

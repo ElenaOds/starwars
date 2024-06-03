@@ -3,7 +3,7 @@ import React from 'react';
 
 import { useState, useEffect } from 'react';
 import { getHeroesById, getFilms, getShips } from '../../lib/api';
-import Flow from './flow';
+import Flow from './Flow';
 
 export default function HeroesDetailsData({id}) {
     const [hero, setHero] = useState(null);
@@ -63,12 +63,11 @@ export default function HeroesDetailsData({id}) {
         const starship = starships.find((s) => s.id === shipId);
         return starship ? starship : 'Unknown ship';
       })
-     
 
-
+  
     return (
         <div className="w-full flex justify-center">
-        <Flow hero={hero} films={selectedFilms} starships={selectedShips}/>  
+          <Flow hero={hero} films={selectedFilms} starships={selectedShips}/>
         </div>
     )
 }
