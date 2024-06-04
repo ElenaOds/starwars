@@ -1,7 +1,7 @@
 ## Starwars project 
 A web-application which displays a list of starwars heroes and allows to get details of each hero
 
-[Link to live page](https://nextjs.org/docs)
+[Link to live page](https://starwars-pink.vercel.app/)
 
 ### Technologies used:
 <ul>
