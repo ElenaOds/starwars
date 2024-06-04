@@ -15,4 +15,3 @@ export default function Pagination({page, handleNextPage, handlePreviousPage, co
       </div>
     );
   }
-  
