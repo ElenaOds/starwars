@@ -6,7 +6,7 @@ import ReactFlow, { useNodesState, useEdgesState } from 'reactflow';
 import 'reactflow/dist/style.css';
 
 
-export default function Flow({ hero, films, starships }) {
+export default function FlowChart({ hero, films, starships }) {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
 

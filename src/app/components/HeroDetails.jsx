@@ -3,7 +3,7 @@ import React from 'react';
 
 import { useState, useEffect } from 'react';
 import { getHeroesById, getFilms, getShips } from '../../lib/api';
-import Flow from './Flow';
+import FlowChart from './FlowChart';
 
 export default function HeroesDetailsData({id}) {
     const [hero, setHero] = useState(null);
@@ -67,7 +67,7 @@ export default function HeroesDetailsData({id}) {
   
     return (
         <div className="w-full flex justify-center">
-          <Flow hero={hero} films={selectedFilms} starships={selectedShips}/>
+          <FlowChart hero={hero} films={selectedFilms} starships={selectedShips}/>
         </div>
     )
 }
