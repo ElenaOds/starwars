@@ -44,7 +44,7 @@ const handleNextPage = () => {
          )
        })}  
       </ul>
-      <Pagination page={page} handlePreviousPage={handlePreviousPage} handleNextPage={handleNextPage} count={count}/>  
+        <Pagination page={page} handlePreviousPage={handlePreviousPage} handleNextPage={handleNextPage} count={count}/>  
       </div>
     );
   } 

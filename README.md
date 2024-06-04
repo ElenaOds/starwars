@@ -16,11 +16,11 @@ A web-application which displays a list of starwars heroes and allows to get det
 
 ### Getting Started
 
-1.Clone current repository
-2.Install all dependencies with **npm install**
-3.Run the development server with **npm run dev**
-4.Open http://localhost:3000 with your browser to see the result
-5.Run **npm run test** to start testing
+- Clone current repository
+- Install all dependencies with **npm install**
+- Run the development server with **npm run dev**
+- Open http://localhost:3000 with your browser to see the result
+- Run **npm run test** to start testing
 
 
 
