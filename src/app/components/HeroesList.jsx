@@ -35,17 +35,20 @@ const handleNextPage = () => {
     setPage((prevPage) => prevPage + 1);
 }
 
+const handleSetPage  = (newPage) => {
+  setPage(newPage);
+}
 
     return (
       <div className="flex flex-col w-full">
-      <ul className="grid gap-4 mb-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+      <ul className="grid gap-4 mb-8 md:mb-10 lg:mb-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
        {items.map((item) => {
         return (
             <HeroesListItem key={item.id} item={item} />
          )
        })}  
       </ul>
-      <Pagination  page={page} handlePreviousPage={handlePreviousPage} handleNextPage={handleNextPage} count={count}/>
+      <Pagination page={page} handlePreviousPage={handlePreviousPage} handleNextPage={handleNextPage} handleSetPage={handleSetPage} count={count} />
       </div>
     );
   } 

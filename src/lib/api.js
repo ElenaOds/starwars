@@ -8,9 +8,10 @@ const api = axios.create({
 //Getting all heroes from API requesting data from each page
   export const getHeroes = async ({ page }) => {
     try {
-        const {data} = await api.get(`people/?page=${page}`, {
+        // const {data} = await api.get(`people/?page=${page}`, {
+          const {data} = await api.get(`people/`, {
             params: {
-                per_page: 10,
+              page,
             },
         });
         return data;
