@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import HeroesList from '../components/HeroesList';
 
 export const metadata = {

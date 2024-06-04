@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
 import { render, fireEvent } from '@testing-library/react';
 
-import Pagination from '../app/components/Pagination';
+import Pagination from '../app/components/pagination';
 
 describe('Pagination component', () => {
     it('calls handleNextPage when Next button is clicked', () => {

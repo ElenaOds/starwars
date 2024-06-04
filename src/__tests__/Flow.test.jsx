@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
 import { render } from '@testing-library/react';
 
-import Flow from '../app/components/Flow';
+import Flow from '../app/components/flow';
 import { heroMock } from '../__mocks__/heroMocks';
 import { filmsMock } from '../__mocks__/filmsMocks';
 import { starshipsMock } from '../__mocks__/starshipsMock';
