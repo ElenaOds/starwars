@@ -15,7 +15,7 @@ export default function FlowChart({ hero, films, starships }) {
   const heroNode = {
     id: `hero-${hero.id}`,
     data: { label: hero.name },
-    position: {x:0, y: 0},
+    position: {x: 0, y: 0},
     style: { 
       backgroundColor: '#3B82F6', 
       color: '#fff', 
@@ -92,7 +92,12 @@ export default function FlowChart({ hero, films, starships }) {
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
-        fitView
+        // fitView
+        // defaultViewport={{
+        //   x: 0,
+        //   y: 0,
+        //   zoom: 1
+        // }}
       >
         </ReactFlow>
     </div>

@@ -10,7 +10,7 @@ const api = axios.create({
     try {
         const {data} = await api.get(`people/?page=${page}`, {
             params: {
-                per_page: 10
+                per_page: 10,
             },
         });
         return data;

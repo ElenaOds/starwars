@@ -9,10 +9,9 @@ export default function ErrorComponent({ error, reset }) {
     <div>
       <p>{`Something went wrong. ${error.message}`}</p>
       <button onClick={() => reset()}
-       className={clsx(
-        'py-2.5 px-5 bg-blue-500 text-white text-base text-center font-medium rounded',
-        disabled && 'bg-blue-200',
-      )}>Try again</button>
+       className='py-2.5 px-5 bg-blue-500 text-white text-base text-center font-medium rounded'>
+        Try again
+        </button>
     </div>
   );
 }

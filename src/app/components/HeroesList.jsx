@@ -10,6 +10,7 @@ export default function HeroesList() {
  const [page, setPage] = useState(1);
  const [count, setCount] = useState();
 
+
      useEffect(() => {
         const fetchData = async () => {
             try {
@@ -44,7 +45,7 @@ const handleNextPage = () => {
          )
        })}  
       </ul>
-        <Pagination page={page} handlePreviousPage={handlePreviousPage} handleNextPage={handleNextPage} count={count}/>  
+      <Pagination  page={page} handlePreviousPage={handlePreviousPage} handleNextPage={handleNextPage} count={count}/>
       </div>
     );
   } 
