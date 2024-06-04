@@ -1,12 +1,11 @@
 ## Starwars project 
-is a web-application which allows to 
+A web-application which displays a list of starwars heroes and allows to get details of each hero
 
-## [Link to live page](https://nextjs.org/docs)
+[Link to live page](https://nextjs.org/docs)
 
-## Technologies used:
-
+### Technologies used:
 <ul>
-<li>Nesx.js</li>
+<li>Next.js</li>
 <li>React</li>
 <li>Tailwind</li>
 <li>Axios</li>
@@ -15,14 +14,13 @@ is a web-application which allows to
 <li>Jest</li>
 </ul>
 
-## Getting Started
-<ol>
-<li>Clone current repository</li>
-<li>Install all dependencies with **npm install**</li>
-<li>Run the development server with **npm run dev**</li>
-<li>Open [http://localhost:3000](http://localhost:3000) with your browser to see the result</li>
-<li>Run **npm run test** to start testing</li>
-</ol>
+### Getting Started
+
+1.Clone current repository
+2.Install all dependencies with **npm install**
+3.Run the development server with **npm run dev**
+4.Open http://localhost:3000 with your browser to see the result
+5.Run **npm run test** to start testing
 
 
 
