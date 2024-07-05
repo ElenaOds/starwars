@@ -66,7 +66,7 @@ export default function HeroesDetailsData({id}) {
 
   
     return (
-        <div className="w-full flex justify-center">
+        <div className="flex justify-center">
           <FlowChart hero={hero} films={selectedFilms} starships={selectedShips}/>
         </div>
     )

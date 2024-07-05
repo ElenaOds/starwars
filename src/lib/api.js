@@ -3,6 +3,7 @@ import axios from 'axios';
 // Create base url which is automatically inserted in the requests
 const api = axios.create({
     baseURL: 'https://sw-api.starnavi.io/',
+
   });
 
 //Getting all heroes from API requesting data from each page

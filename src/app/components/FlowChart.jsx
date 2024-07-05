@@ -92,12 +92,6 @@ export default function FlowChart({ hero, films, starships }) {
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
-        // fitView
-        // defaultViewport={{
-        //   x: 0,
-        //   y: 0,
-        //   zoom: 1
-        // }}
       >
         </ReactFlow>
     </div>

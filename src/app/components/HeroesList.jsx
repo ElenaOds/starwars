@@ -40,7 +40,7 @@ const handleSetPage  = (newPage) => {
 }
 
     return (
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col">
       <ul className="grid gap-4 mb-8 md:mb-10 lg:mb-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
        {items.map((item) => {
         return (
